@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="vue-app3">
+    	<h1>键盘码</h1>
+        <label>输入姓名:</label>
+        <!--
+        	键盘事件：
+        	v-on:keyup="tagName"
+        	v-on:keyup="tagPwd"
+        -->
+        <input type="text" ref="name" v-model="name" >
+        <spna>{{name}}</spna>
+        <br>
+        <label>输入密码:</label>
+    	<input type="password" ref="psd"  />
+    	<span>{{psd}}</span>
+    </div>
+    <script src="js/vue-app3.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>event</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div id="vue-app2">
+			<!-- 点击事件将只会触发一次  once-->
+			<button v-on:click.once="add(2)">增加一岁</button>
+			<button v-on:click="reduce(2)">减少一岁</button>
+			<button v-on:dblclick="add(10)">增加十岁</button>
+			<button v-on:dblclick="reduce(10)">减少十岁</button>
+			<p>this is {{age}}</p>
+			<a v-bind:href="app_path">百度一下</a>
+			<input name="user" v-bind:value="age" />
+			<p v-html="website"></p>
+			
+			<div id="coordinate" v-on:mousemove="updataXY">
+				{{x}},{{y}}--<span v-on:mousemove="stopMoving">stopMoving </span>
+			</div>
+			<br />
+			<a v-on:click.prevent="alert()" href="app_path">点击一下</a>
+
+			
+
+
+		</div>
+		<script type="text/javascript" src="js/vue-app2.js" ></script>
+	</body>
+</html>
