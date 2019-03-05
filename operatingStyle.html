@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>operatingStyle</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<!--
+			动态操作CSS样式属性
+				==>第一：绑定的必须要于CSS定义的类属性一致
+				==第二：使用v-bind:class==>指定操作属性
+				     记住CSS属性是属于一个对象
+				如果要想显示CSS样式直接取反就可以了     
+		-->
+		
+		<div id="vue-app5">
+			<!--<h1>示例一</h1>
+			<div v-bind:class="{changeColor : changeColor}" v-on:click="changeColor = !changeColor">
+				<span>Herry</span>
+			</div>
+			
+			<h1>示例二</h1>
+			<button v-on:click="changeColor = !changeColor">changeColor</button>
+			<button v-on:click="changeLenght = !changeLenght">changeLength</button>
+			<div v-bind:class="compClass">
+				<span>Henery</span>
+			</div>-->
+			
+			<button v-on:click="erron = !erron">togger erron</button>
+			<button v-on:click="success = !success">togger success</button>
+			
+			<p v-if="erron">页面出现错误 404</p>
+			<p v-else-if="success">页面显示正常 200</p>
+			
+			<p v-show="erron">页面出现错误 404</p>
+			<p v-show="success">页面显示正常 200</p>
+		</div>
+		<script src="js/vue-app5.js"></script>
+	</body>
+</html>
